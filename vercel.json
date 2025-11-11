@@ -1,21 +1,16 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "devCommand": "npm start",
+  "installCommand": "npm install",
+  "framework": "create-react-app",
   "routes": [
     {
       "src": "/static/(.*)",
       "dest": "/static/$1"
     },
     {
-      "src": "/(.*\\.(?:ico|png|jpg|jpeg|svg|css|js))",
+      "src": "/(.*\\.(ico|png|jpg|jpeg|svg|css|js|json))",
       "dest": "/$1"
     },
     {
