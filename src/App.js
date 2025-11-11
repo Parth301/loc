@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
-import { AlertCircle, CheckCircle, TrendingUp, TrendingDown, Code, GitCommit, Activity, Zap, Shield, Target, Brain, Sparkles } from 'lucide-react';
+import { AlertCircle, CheckCircle, TrendingUp, Code, Activity, Zap, Shield, Target, Brain, Sparkles } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -41,7 +41,7 @@ export default function App() {
   useEffect(() => {
     console.log("Saved to localStorage:", analyses);
   }, [analyses]);
-  const [showResults, setShowResults] = useState(false);
+
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const COCOMO_CONSTANTS = {
@@ -122,7 +122,7 @@ export default function App() {
         console.log("Saving this analysis list:", updated);
         return updated;
       });
-      setShowResults(true);
+      
       setIsAnalyzing(false);
       setActiveTab('results');
     }, 2000);
