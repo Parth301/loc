@@ -122,7 +122,6 @@ export default function App() {
         console.log("Saving this analysis list:", updated);
         return updated;
       });
-      
       setIsAnalyzing(false);
       setActiveTab('results');
     }, 2000);
@@ -582,7 +581,7 @@ export default function App() {
       alignItems: 'flex-start',
       gap: '8px',
       marginBottom: '12px',
-      color: '#d1d5db'
+      color: '#000000ff'
     },
     bullet: {
       marginTop: '4px',
@@ -766,7 +765,7 @@ export default function App() {
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="name" stroke="#9ca3af" />
                         <YAxis stroke="#9ca3af" />
-                        <Tooltip contentStyle={{ background: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }} />
+                        <Tooltip contentStyle={{ background: 'rgba(255, 255, 255, 0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }} />
                         <Bar dataKey="risk" fill="#3b82f6" radius={[8, 8, 0, 0]} />
                         <Bar dataKey="effort" fill="#6366f1" radius={[8, 8, 0, 0]} />
                       </BarChart>
@@ -1046,7 +1045,7 @@ export default function App() {
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="name" stroke="#9ca3af" />
                         <YAxis stroke="#9ca3af" />
-                        <Tooltip contentStyle={{ background: 'rgba(209, 212, 210, 0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }} />
+                        <Tooltip contentStyle={{ background: 'rgba(254, 243, 199, 1)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }} />
                         <Legend />
                         <Line type="monotone" dataKey="effort" stroke="#3b82f6" strokeWidth={3} dot={{ fill: '#3b82f6', r: 5 }} />
                         <Line type="monotone" dataKey="risk" stroke="#6366f1" strokeWidth={3} dot={{ fill: '#6366f1', r: 5 }} />
